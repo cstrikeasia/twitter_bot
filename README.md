@@ -1,25 +1,54 @@
-# 模板
-<img alt="Discord" src="https://img.shields.io/discord/926545182407688273">
+- Author: Yuuzi261
+- Secondary Development:miyashooooo
+- This robot can be set up directly on the host, and then let the server to use this service to invite the robot into the group can be
+- Do not modify the ```DATA_PATH``` if it is not necessary.
 
-------
+[.env]
 
-- 這是一個 ExpTech Github 模板
+```BOT_TOKEN```
+discord bot token
 
-## 索引
-- [貢獻者](#貢獻者)
-- [發佈規則](#發佈規則)
-- [合作](#合作)
+```TWITTER_TOKEN```
+Twitter login COOKIE (install the Chrome plugin https://www.editthiscookie.com to get, after installation into the Twitter random page, click please refer to the image folder [cookie取得教學_1, cookie取得教學_2])
 
-## 貢獻者
-- whes1015 `文檔`
+```DATA_PATH```
+data path
 
-------
+```ADMIN_ID```
+Admin discord id
 
-## 發佈規則
-- 如果新版本中有錯誤，且尚未列出，請將錯誤資訊提交到 ```issue```
-- 如果您使用任何形式的辱罵性或貶義性語言給其他用戶，您將永遠被封禁！
-- 不要發送重複無意義內容至 ```issue```，否則您將永遠被封禁！
-- 若有任何問題或建議，歡迎提出
+-------------------------
 
-## 合作
-- 若有任何可以改進的地方，歡迎使用 ```Pull requests``` 來提交
+[Bot Commands]
+
+#admin
+
+```/server list```
+View a list of servers that have registered for this service
+
+```/server ban [Server ID] ```
+Disables the specified server from using this service, so that it does not receive subscription notifications
+
+```/server unban [Server ID]```
+Undisable the specified server to use this service, the server can receive subscribed notification messages after it is undisabled
+
+```/sync```
+Synchronize Twitter notifications with the database
+
+
+#Users
+
+```/add notifier [Twitter Username] [Channel ID] [Users to tag (optional)]```
+Add users to receive notifications
+
+```/remove notifier [Twitter Username] [Channel ID] ```
+Remove users to receive notifications
+
+```/customize message [Twitter Username] [Channel ID] [Customize push message (True to restore initial settings, False to set custom message)]```
+Customizing notification messages
+
+```/list users```
+List the push username that are currently registered to receive notifications on the server
+
+```/push set ```
+Set the type of push notifications to receive (發佈,轉發,引用,回覆), separated by commas, so that when a notifier publishes, quotes, or forwards a message, it will not send it if it is not in the list

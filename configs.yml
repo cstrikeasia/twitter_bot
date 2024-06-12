@@ -1,0 +1,8 @@
+prefix: ''                          # 機器人命令前綴
+activity: '推特'                   # 機器人顯示的活動名稱
+twitter_check_period: 10             # 檢查推文的頻率（不建議將此值設置得太低，避免速率限制）
+update_retry_delay: 300     # 當Tweets Updater遇到異常（例如速率限制）時的重試間隔
+tasks_monitor_check_period: 60      # 檢查每個任務是否正常運行的間隔，如果某個任務停止，嘗試重新啟動
+tasks_monitor_log_period: 14400     # 將當前運行中的任務列表輸出到執行Log的間隔
+auto_turn_off_notification: true    # (v0.4或更新版本) 如果某個使用者的所有通知都已停用，決定是否取消追蹤該使用者
+auto_unfollow: true                 # (v0.4或更新版本) 如果某個使用者的所有通知都已停用，決定是否停用該使用者的通知（Twitter端）
