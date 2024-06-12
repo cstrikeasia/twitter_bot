@@ -10,6 +10,8 @@ install the necessary modules
 ```python bot.py```
 Run and invite the bot to your server
 
+## config
+
 [.env]
 
 ```BOT_TOKEN```
