@@ -3,6 +3,13 @@
 - This robot can be set up directly on the host, and then let the server to use this service to invite the robot into the group can be
 - Do not modify the ```DATA_PATH``` if it is not necessary.
 
+## start
+```pip install -r requirements.txt```
+install the necessary modules
+
+```python bot.py```
+Run and invite the bot to your server
+
 [.env]
 
 ```BOT_TOKEN```
